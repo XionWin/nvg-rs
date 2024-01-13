@@ -6,4 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+libc = "*"
+once_cell = "*"
+color-rs = { path="../color-rs" }
+colored-rs = { path="../colored-rs" }
 gles-rs = { path="../gles-rs" }
+kms-rs = { path="../kernel/kms-rs" }
