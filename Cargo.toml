@@ -11,4 +11,3 @@ once_cell = "*"
 color-rs = { path="../color-rs" }
 colored-rs = { path="../colored-rs" }
 gles-rs = { path="../gles-rs" }
-kms-rs = { path="../kernel/kms-rs" }

@@ -1,16 +1,15 @@
+mod graphic;
+
+pub use graphic::*;
+
 use once_cell::sync::Lazy;
 
-pub fn init(context: &kms_rs::Context) {
-    colored_rs::print_debug!("gl_extensions: {:?}", gles_rs::get_string(gles_rs::StringName::Extensions));
-    colored_rs::print_debug!("gl_version: {:?}", gles_rs::get_string(gles_rs::StringName::Version));
-    colored_rs::print_debug!("gl_sharding Language Version: {:?}", gles_rs::get_string(gles_rs::StringName::ShadingLanguageVersion));
-    colored_rs::print_debug!("gl_vendor: {:?}", gles_rs::get_string(gles_rs::StringName::Vendor));
-    colored_rs::print_debug!("gl_renderer: {:?}", gles_rs::get_string(gles_rs::StringName::Renderer));
-    gles_rs::viewport(0, 0, context.get_width(), context.get_height());
+pub fn init(graphic: &Graphic) {
+    gles_rs::viewport(0, 0, graphic.get_width(), graphic.get_height());
 }
 
 static STARTED_TICK: Lazy<std::time::SystemTime> = Lazy::new(|| std::time::SystemTime::now());
-pub fn update(_context: &kms_rs::Context) {
+pub fn update(_graphic: &Graphic) {
     let started_tick = STARTED_TICK.to_owned();
     let angle = (std::time::SystemTime::now().duration_since(started_tick).unwrap().as_millis() / 20 % 360) as u32;
     let hsv = color_rs::HSV::new(angle as f32, 1f32, 0.1f32);
