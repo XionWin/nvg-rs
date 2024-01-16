@@ -5,7 +5,7 @@ pub use graphic::*;
 use once_cell::sync::Lazy;
 
 pub fn init(graphic: &Graphic) {
-    let program = gles_rs::GfxProgram::new("shaders/nvg-es2.vert", "shaders/nvg-es2.frag");
+    let program = gles_rs::GfxProgram::new("resources/shaders/nvgv2.vert", "resources/shaders/nvgv2.frag");
     program.active();
 
     gles_rs::viewport(0, 0, graphic.get_width(), graphic.get_height());
