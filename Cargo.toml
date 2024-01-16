@@ -7,7 +7,3 @@ edition = "2021"
 
 [dependencies]
 libc = "*"
-once_cell = "*"
-color-rs = { path="../color-rs" }
-colored-rs = { path="../colored-rs" }
-gles-rs = { path="../gles-rs" }
