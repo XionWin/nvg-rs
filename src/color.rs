@@ -1,7 +1,5 @@
 use std::ops::Rem;
 
-use libc::sleep;
-
 #[derive(Debug, Copy, Clone, Default)]
 pub struct Color {
     pub r: f32,
