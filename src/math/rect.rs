@@ -1,4 +1,5 @@
-use crate::{Point, Extent, AsPrimitive};
+use super::{Point, Extent};
+use crate::as_primitive::AsPrimitive;
 
 #[derive(Debug, Copy, Clone, Default)]
 pub struct Rect {

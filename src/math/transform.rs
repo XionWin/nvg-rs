@@ -1,6 +1,7 @@
 use std::ops::{Mul, MulAssign};
 
-use crate::{Point, as_primitive::AsPrimitive};
+use super::Point;
+use crate::as_primitive::AsPrimitive;
 
 #[derive(Debug, Copy, Clone, Default)]
 pub struct Transform(pub [f32; 6]);

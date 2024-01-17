@@ -4,7 +4,6 @@ mod rect;
 mod bounds;
 mod transform;
 
-
 pub use point::*;
 pub use extent::*;
 pub use rect::*;
