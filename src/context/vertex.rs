@@ -1,3 +1,4 @@
+#[repr(C)]
 #[derive(Debug, Copy, Clone, Default)]
 pub struct Vertex {
     pub x: f32,
